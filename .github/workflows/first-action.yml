@@ -1,0 +1,20 @@
+# First need to provide name of workflow
+name: First Workflow
+
+# After name define event to trigger action on named workflow - workflow_dispatch (waits for user to manually start workflow)
+on: workflow_dispatch
+
+# Next define job with job name for workflow
+jobs:
+  first-job:
+    # Run job on linux based environment
+    runs-on: ubuntu-latest
+    # define steps with step command - each step placed on new line with a name identifier and below it a run command
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
+
+
+
